@@ -41,5 +41,4 @@ public class HomeWorkAPP {
             System.out.println("a < b");
         }
     }
-
 }
