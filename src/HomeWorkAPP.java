@@ -1,45 +1,50 @@
 public class HomeWorkAPP {
-    public static void main(String[] args) {
-         printThreeWords();
-        CheckSumSign();
-        printColor();
-        compareNumbers();
-    }
 
-    public static void printThreeWords() {
-        System.out.println("Orange");
-        System.out.println("Banana");
-        System.out.println("Apple");
-    }
+    public static void main (String[] args){
+        Employers[] employer = {
+                new Employers(
+                    "Иванов Иван Иванович",
+                    "Программист",
+                    "one@mail.ru",
+                    "+7911-111-11-11",
+                    100000,
+                    40),
+                new Employers(
+                        "Петров Петр Петрович",
+                        "Инженер",
+                        "two@mail.ru",
+                        "+7922-222-22-22",
+                        80000,
+                        46),
+                new Employers(
+                        "Любимова Анна Георгиевна",
+                        "Секретарь",
+                        "three@mail.ru",
+                        "+7933-333-33-33",
+                        25000,
+                        27),
+                new Employers(
+                        "Варашилов Василий Павлович",
+                        "Начальник производства",
+                        "four@mail.ru",
+                        "+7911-123-45-57",
+                        70000,
+                        55),
+                new Employers(
+                        "Бесфамильный Александр Владимирович",
+                        "Продукт-менеджер",
+                        "five@mail.ru",
+                        "+7999-000-99-99",
+                        75000,
+                        33)
+        };
 
-    public static void CheckSumSign(){
-        int a = 15;
-        int b = 4;
-        int c = a + b;
-        if (c >= 0) {
-            System.out.println("Сумма положительная");
-        } else {
-            System.out.println("Сумма отрицательная");
-        }
-        }
-    public static void printColor(){
-        int value = 77;
-        if (value <= 0){
-            System.out.println("Красный");
-        } if (value <= 100){
-            System.out.println("Желтый");
-        } if (value > 100){
-            System.out.println("Зеленый");
+        int minAge = 40;
+        for (Employers employers : employer){
+            if (employers.age > minAge){
+                employers.printInfo();
+                System.out.println();
+            }
         }
     }
-    public static void compareNumbers(){
-        int a = 5;
-        int b = 17;
-        if (a >= b){
-            System.out.println("a >= b");
-        } else {
-            System.out.println("a < b");
-        }
-    }
-
 }
