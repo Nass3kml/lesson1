@@ -1,3 +1,7 @@
+package hw7;
+
+import hw7.Plate;
+
 public class Cat {
     private boolean isFull;
     private int appetite;
