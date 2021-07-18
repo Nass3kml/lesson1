@@ -1,18 +1,23 @@
+
 public class HomeWorkAPP {
 public static void main(String[] args){
-    AnimalMill mill = new AnimalMill();
+Cat[] cats = {
+        new Cat(7, "Фрося"),
+        new Cat(10,"Барсик"),
+        new Cat(15,"Василиск"),
+};
 
-    Cat cat = mill.newCat(200);
-    Dog dog = mill.newDog(500, 10);
+Plate plate = new Plate(40);
 
-    cat.runDist(150);
-    cat.swimDist(5);
+for (Cat cat : cats){
+    cat.eat(plate);
+}
 
-    dog.runDist(550);
-    dog.swimDist(9);
+plate.increaseFood(80);
 
-    System.out.println("Всего животных:" + mill.getAnimalCount());
-    System.out.println("Создано собак:" + mill.getDogsCount());
-    System.out.println("Создано кошек:" + mill.getCatsCount());
+for (Cat cat : cats){
+    cat.eat(plate);
+}
+
 }
 }

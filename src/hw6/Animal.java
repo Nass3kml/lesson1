@@ -1,3 +1,5 @@
+package hw6;
+
 public abstract class Animal {
     private float maxDistanceRun;
     private float maxDistanceSwim;

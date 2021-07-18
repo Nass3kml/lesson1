@@ -1,3 +1,5 @@
+package hw6;
+
 public class AnimalMill {
     private int animalCount;
     private int dogsCount;
